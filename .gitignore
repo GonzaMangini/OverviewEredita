@@ -1,0 +1,22 @@
+# Node
+node_modules/
+dist/
+.vite/
+*.log
+
+# Env
+.env
+.env.local
+*.env
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go (API serverless)
+api/bin/
+api/vendor/
+api/go.work

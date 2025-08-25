@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.font-brand {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Asegurar que el scroll suave funcione en todos los navegadores */
+* {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Animaciones personalizadas para ProductCard */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.6);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+.animate-shimmer {
+  animation: shimmer 1.2s ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+/* Efectos de hover mejorados */
+.product-card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Animación de carga de grid */
+.grid-item {
+  animation: fade-in 0.4s ease-out;
+  animation-fill-mode: both;
+}
+
+.grid-item:nth-child(1) { animation-delay: 0.1s; }
+.grid-item:nth-child(2) { animation-delay: 0.2s; }
+.grid-item:nth-child(3) { animation-delay: 0.3s; }
+.grid-item:nth-child(4) { animation-delay: 0.4s; }
+.grid-item:nth-child(5) { animation-delay: 0.5s; }
+.grid-item:nth-child(6) { animation-delay: 0.6s; }
+.grid-item:nth-child(7) { animation-delay: 0.7s; }
+.grid-item:nth-child(8) { animation-delay: 0.8s; }
+
+/* Animación del corazón */
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes heart-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-heart-beat {
+  animation: heart-beat 0.6s ease-in-out;
+}
+
+.animate-heart-pop {
+  animation: heart-pop 0.3s ease-out;
+}
+
+/* Efecto de partículas del corazón */
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(0);
+    opacity: 0;
+  }
+}
+
+.animate-particle-float {
+  animation: particle-float 0.8s ease-out forwards;
+}
+
+/* Animaciones para Landing */
+@keyframes slide-up-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes title-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes subtitle-entrance {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-up-fade {
+  animation: slide-up-fade 1.2s ease-out;
+}
+
+.animate-title-entrance {
+  animation: title-entrance 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.animate-subtitle-entrance {
+  animation: subtitle-entrance 0.8s ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: both;
+}
