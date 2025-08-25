@@ -1,5 +1,10 @@
 {
+  "builds": [
+    { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "frontend/dist" } },
+    { "src": "frontend/api/**/*.go", "use": "@vercel/go" }
+  ],
   "rewrites": [
-    { "source": "/api/v1/products/:id", "destination": "/api/v1/products/_id" }
+    { "source": "/api/v1/products/:id", "destination": "/frontend/api/v1/products/_id" },
+    { "source": "/(.*)", "destination": "/frontend/$1" }
   ]
 }
