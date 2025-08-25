@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"api/internal/auth"
-	"api/internal/db"
-	jwtu "api/internal/jwt"
-	"api/internal/models"
+	"api/lib/auth"
+	"api/lib/db"
+	jwtu "api/lib/jwt"
+	"api/lib/models"
 )
 
 // Handler: GET /api/v1/auth/me

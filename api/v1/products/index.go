@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"api/internal/db"
-	"api/internal/models"
+	"api/lib/db"
+	"api/lib/models"
 )
 
 // Handler serves GET /api/v1/products
