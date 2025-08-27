@@ -6,8 +6,8 @@ import (
 	"path"
 	"strconv"
 
-	"api/internal/db"
-	"api/internal/models"
+	"handler/lib/db"
+	"handler/lib/models"
 )
 
 // Handler serves GET /api/v1/products/:id

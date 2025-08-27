@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"api/lib/db"
-	jwtu "api/lib/jwt"
-	"api/lib/models"
+	"handler/lib/db"
+	jwtu "handler/lib/jwt"
+	"handler/lib/models"
 )
 
 type loginRequest struct {

@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"api/lib/db"
-	"api/lib/models"
+	"handler/lib/db"
+	"handler/lib/models"
 )
 
 // Handler serves GET /api/v1/categories
